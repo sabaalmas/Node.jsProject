@@ -7,7 +7,8 @@ app.get('/', (request,response)=>{
     //response.json({})
 
     response.json({
-        name: "Almas"
+        name: "Almas",
+        age: 26
     })
 })
 
