@@ -14,7 +14,7 @@ app.get('/', (request,response)=>{
 
 app.get('/about', (request, response)=>{
     response.send({
-        name : saba
+        name : "saba"
     }
     )
 })
