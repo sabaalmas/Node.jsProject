@@ -1,24 +1,23 @@
 const express = require('express')
-
+const path = require ('path')
 const app = express()
 
 
 app.get('/', (request,response)=>{
     //response.json({})
-
-    response.json({
-        name: "Almas",
-        age: 26
-    })
+    console.log(__dirname)
+    response.sendFile(path.resolve(__dirname,'index.html'))
 })
 
 app.get('/about', (request, response)=>{
-    response.send({
-        name : "saba"
-    }
-    )
+    console.log(__dirname)
+    response.sendFile(path.resolve(__dirname, 'about.html'))
 })
 
+app.get('/contact', (request,response)=>{
+    console.log(__dirname)
+    response.sendFile(path.resolve(__dirname,'contact.html'))
+})
 
 
 
